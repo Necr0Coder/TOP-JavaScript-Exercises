@@ -1,11 +1,16 @@
-const removeFromArray = function (a, b) {
-  let array = arguments[0]; //create array of argument A
+const removeFromArray = function (array, item) {
   console.log(array);
 
-  let index = array.indexOf(b); //index of argument B inside of array
-  newArray = array.splice(b, b - 1);
-  console.log(newArray);
-  return newArray;
+  var i = 0;
+  while (i < array.length) {
+    if (array[i] === item) {
+      array.splice(i, 1);
+    } else {
+      ++i;
+    }
+  }
+  console.log(array);
+  return array;
 };
 
 //function (array, arg 1, ...arg)
