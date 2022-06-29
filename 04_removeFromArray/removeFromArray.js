@@ -1,16 +1,14 @@
-const removeFromArray = function (array, item) {
-  console.log(array);
+const removeFromArray = function (...args) {
+  let array = args[0]; //pull array from list of arguments
 
-  var i = 0;
-  while (i < array.length) {
-    if (array[i] === item) {
-      array.splice(i, 1);
-    } else {
-      ++i;
+  let newArray = []; //create empty array
+  array.forEach((item) => {
+    //cycle through array.
+    if (!args.includes(item)) {
+      newArray.push(item); //push item into newArray unless it is included in the function arguments
     }
-  }
-  console.log(array);
-  return array;
+  });
+  return newArray;
 };
 
 //function (array, arg 1, ...arg)
