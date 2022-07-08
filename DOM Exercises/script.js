@@ -34,3 +34,25 @@ div.style.border = "black thin solid";
 div.style.background = "pink";
 h1.textContent = "I'm in a div";
 pDiv.textContent = "ME TOO!";
+
+//Button 2
+const btn = document.querySelector("#btn");
+btn.onClick = () => alert("Hello World!");
+
+//button 3
+const btn2 = document.querySelector("#btn2");
+function alertFunction2() {
+  alert("PEANUT BUTTER PRINCESS");
+}
+btn2.addEventListener('click', alertFunction2 (e) {
+    console.log(e);
+});
+
+//button 4
+const btn3 = document.querySelector("#btn3");
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
+
+btn3.onClick = alertFunction;
+//btn3.addEventListener("click", alertFunction);
