@@ -1,15 +1,19 @@
 const fibonacci = function (position) {
   // A series of numbers in which each number ( Fibonacci number ) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
 
-  let num;
-  let array = [];
-  let prevNum = array[(-2, -1)];
-
-  for (i = 0; i < position; i++) {
-    array.push((i += prevNum));
+  if (position < 0) {
+    return "OOPS";
   }
-  console.log(array);
-  return array.pop();
+  let a = 1,
+    b = 0,
+    temp;
+
+  for (i = 1; i <= position; i++) {
+    temp = a;
+    a = a + b;
+    b = temp;
+  }
+  return b;
 };
 
 // Do not edit below this line
